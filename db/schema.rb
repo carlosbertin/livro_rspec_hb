@@ -10,7 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_035041) do
+ActiveRecord::Schema.define(version: 2020_04_12_201559) do
+
+  create_table "categorias", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "produtos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nome"
+    t.string "marca"
+    t.string "modelo"
+    t.text "descricao"
+    t.date "data_fabricacao"
+    t.float "valor"
+    t.float "peso"
+    t.string "dimensoes"
+    t.bigint "sub_categoria_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["sub_categoria_id"], name: "index_produtos_on_sub_categoria_id"
+  end
+
+  create_table "sub_categorias", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.bigint "categoria_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["categoria_id"], name: "index_sub_categorias_on_categoria_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nome"
@@ -19,4 +50,6 @@ ActiveRecord::Schema.define(version: 2020_04_12_035041) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "produtos", "sub_categorias"
+  add_foreign_key "sub_categorias", "categorias"
 end
