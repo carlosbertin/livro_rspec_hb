@@ -1,0 +1,15 @@
+======================================================================
+Para instanciar objetos no IRB que estão na pasta /lib:
+
+2.5.1 :005 > require './game.rb' 
+ => true 
+2.5.1 :006 > game = Game.new
+ => #<Game:0x000055d5e9fd9868 @state="initial">
+======================================================================
+Para rodar os testes:
+carlos@carlos:~/Documentos/RubyOnRails/git/livro_Rspec_HB/testes$ rspec spec/state_of_game_spec.rb
+======================================================================
+Após alterar o código de alguma classe, é possível atualizar o IRB sem precisar sair
+2.5.1 :002 > load('./lib/user.rb')
+ => true 
+ ======================================================================
