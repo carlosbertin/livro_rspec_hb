@@ -14,4 +14,5 @@ RSpec.describe Categoria, type: :model do
       expect(categoria.errors.messages[:nome]).to eq ["can't be blank"]
     end
   end
+
 end

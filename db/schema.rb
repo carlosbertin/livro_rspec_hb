@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_201559) do
+ActiveRecord::Schema.define(version: 2020_04_19_000216) do
 
   create_table "categorias", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nome"
@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 2020_04_12_201559) do
     t.string "modelo"
     t.text "descricao"
     t.date "data_fabricacao"
-    t.float "valor"
+    t.string "valor"
     t.float "peso"
     t.string "dimensoes"
-    t.bigint "sub_categoria_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["sub_categoria_id"], name: "index_produtos_on_sub_categoria_id"
+    t.bigint "subcategoria_id"
+    t.index ["subcategoria_id"], name: "fk_rails_07e78408aa"
   end
 
   create_table "sub_categorias", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -50,6 +50,6 @@ ActiveRecord::Schema.define(version: 2020_04_12_201559) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "produtos", "sub_categorias"
+  add_foreign_key "produtos", "sub_categorias", column: "subcategoria_id"
   add_foreign_key "sub_categorias", "categorias"
 end

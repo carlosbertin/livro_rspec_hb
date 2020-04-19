@@ -411,3 +411,435 @@ FOREIGN KEY (`sub_categoria_id`)
   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeColumnTypeProduto (20200413010050)
+  [1m[35m (40.8ms)[0m  [1m[35mALTER TABLE `produtos` CHANGE `valor` `valor` decimal DEFAULT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200413010050')[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `ar_internal_metadata`.`value` = 'development', `ar_internal_metadata`.`updated_at` = '2020-04-13 01:02:57.870223' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AlterColumnValorToStringFromProduto (20200413010638)
+  [1m[35m (49.5ms)[0m  [1m[35mALTER TABLE `produtos` CHANGE `valor` `valor` varchar(255) DEFAULT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200413010638')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoria Create (0.2ms)[0m  [1m[32mINSERT INTO `categorias` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('Eletrônicos', 'Equipamentos eletrônicos em geral', '2020-04-18 21:03:37.705812', '2020-04-18 21:03:37.705813')[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategoria Create (0.5ms)[0m  [1m[32mINSERT INTO `sub_categorias` (`nome`, `descricao`, `categoria_id`, `created_at`, `updated_at`) VALUES ('Celulares', 'Smartphones, telefones fixos, telefones simples', 14, '2020-04-18 21:04:19.512653', '2020-04-18 21:04:19.512655')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategoria Create (0.6ms)[0m  [1m[32mINSERT INTO `sub_categorias` (`nome`, `descricao`, `categoria_id`, `created_at`, `updated_at`) VALUES ('Notebooks', 'Melhores marcas de Notebooks', 14, '2020-04-18 21:15:19.941430', '2020-04-18 21:15:19.941432')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (13.0ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `ar_internal_metadata`.`value` = 'development', `ar_internal_metadata`.`updated_at` = '2020-04-18 21:23:47.096569' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (63.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `livro_rspec_hb`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `livro_rspec_hb` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `categorias` CASCADE[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE `categorias` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `descricao` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `produtos` CASCADE[0m
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE `produtos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `marca` varchar(255), `modelo` varchar(255), `descricao` text, `data_fabricacao` date, `valor` varchar(255), `peso` float(24), `dimensoes` varchar(255), `sub_categoria_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_produtos_on_sub_categoria_id`  (`sub_categoria_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `sub_categorias` CASCADE[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE `sub_categorias` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `descricao` text, `categoria_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_sub_categorias_on_categoria_id`  (`categoria_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `data_nascimento` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (43.4ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_5dd725c7a5`
+FOREIGN KEY (`sub_categoria_id`)
+  REFERENCES `sub_categorias` (`id`)
+[0m
+  [1m[35m (45.4ms)[0m  [1m[35mALTER TABLE `sub_categorias` ADD CONSTRAINT `fk_rails_fd4e0bbe08`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categorias` (`id`)
+[0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20200413010638)[0m
+  [1m[35m (3.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20200412035041),
+(20200412201557),
+(20200412201558),
+(20200412201559);
+
+[0m
+  [1m[35m (22.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-04-18 21:27:13.472610', '2020-04-18 21:27:13.472610')[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `ar_internal_metadata`.`value` = 'test', `ar_internal_metadata`.`updated_at` = '2020-04-18 21:27:13.488433' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '67bf6d520256adea1fb43cfa1ffe155ad079fe07', '2020-04-18 21:27:13.503224', '2020-04-18 21:27:13.503224')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `ar_internal_metadata`.`value` = 'development', `ar_internal_metadata`.`updated_at` = '2020-04-18 21:27:32.697489' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoria Create (0.6ms)[0m  [1m[32mINSERT INTO `categorias` (`nome`, `descricao`, `created_at`, `updated_at`) VALUES ('Do lar', 'objetos do lar', '2020-04-18 21:50:02.658256', '2020-04-18 21:50:02.658257')[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategoria Create (0.6ms)[0m  [1m[32mINSERT INTO `sub_categorias` (`nome`, `descricao`, `categoria_id`, `created_at`, `updated_at`) VALUES ('Mesas', 'Melhores marcas de mesas', 1, '2020-04-18 21:50:52.669400', '2020-04-18 21:50:52.669400')[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategoria Create (0.6ms)[0m  [1m[32mINSERT INTO `sub_categorias` (`nome`, `descricao`, `categoria_id`, `created_at`, `updated_at`) VALUES ('Cadeiras', 'Melhores marcas de cadeiras', 1, '2020-04-18 21:56:05.541703', '2020-04-18 21:56:05.541704')[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeColumnNameSubCategoriaIdToSubCategoriaIdFromProdutos (20200418220352)
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE `produtos` CHANGE `sub_categoria_id` `subcategoria_id` bigint(20) NOT NULL[0m
+  [1m[35m (10.9ms)[0m  [1m[35mALTER TABLE `produtos` RENAME INDEX `index_produtos_on_sub_categoria_id` TO `index_produtos_on_subcategoria_id`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418220352')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.9ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` LIMIT 11[0m
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` LIMIT 11[0m
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` LIMIT 11[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.1ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.5ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.5ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.5ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveColumnNameSubCategoriaIdFromProdutos (20200418223543)
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE `produtos` DROP FOREIGN KEY fk_rails_5dd725c7a5[0m
+  [1m[35m (23.2ms)[0m  [1m[35mALTER TABLE `produtos` DROP COLUMN `subcategoria_id`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418223543')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddSubcategoriaToProdutos (20200418224219)
+  [1m[35m (29.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE  INDEX `index_produtos_on_subcategoria_id`  ON `produtos` (`subcategoria_id`) [0m
+  [1m[35m (25.9ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_07e78408aa`
+FOREIGN KEY (`subcategoria_id`)
+  REFERENCES `subcategorias` (`id`)
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddSubcategoriaToProdutos (20200418224219)
+  [1m[35m (33.4ms)[0m  [1m[35mALTER TABLE `produtos` ADD `sub_categoria_id` bigint[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE  INDEX `index_produtos_on_sub_categoria_id`  ON `produtos` (`sub_categoria_id`) [0m
+  [1m[35m (56.5ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_5dd725c7a5`
+FOREIGN KEY (`sub_categoria_id`)
+  REFERENCES `sub_categorias` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418224219')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubCategoria Load (0.1ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.8ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` ORDER BY `categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` WHERE `categorias`.`id` = 1 LIMIT 1[0m
+  [1m[36mCategoria Load (0.8ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.6ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.6ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mCategoria Load (0.5ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.7ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` WHERE `categorias`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`sub_categoria_id` = 1 LIMIT 11[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.6ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` WHERE `categorias`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` ORDER BY `produtos`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.3ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.6ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveReferencesToProdutos (20200418232115)
+  [1m[35m (31.0ms)[0m  [1m[35mALTER TABLE `produtos` DROP COLUMN `subcategoria_id`[0m
+  [1m[35m (8.1ms)[0m  [1m[35mALTER TABLE `produtos` DROP FOREIGN KEY fk_rails_5dd725c7a5[0m
+  [1m[35m (36.3ms)[0m  [1m[35mALTER TABLE `produtos` DROP COLUMN `sub_categoria_id`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418232115')[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mCategoria Load (0.2ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` ORDER BY `categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mCategoria Load (0.1ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` ORDER BY `categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 LIMIT 11[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (32.0ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint NOT NULL[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE  INDEX `index_produtos_on_subcategoria_id`  ON `produtos` (`subcategoria_id`) [0m
+  [1m[35m (28.7ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_07e78408aa`
+FOREIGN KEY (`subcategoria_id`)
+  REFERENCES `subcategorias` (`id`)
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddColumnSubcategoriaToProdutos (20200418233358)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418233358')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RetiraColumnSubcategoriaToProdutos (20200418234913)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RetiraColumnSubcategoriaToProdutos (20200418234913)
+  [1m[35m (35.1ms)[0m  [1m[35mALTER TABLE `produtos` DROP COLUMN `subcategoria_id`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418234913')[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AdicionaColSubcategoriaIdFkToProdutos (20200419000216)
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_190c72e6b4`
+FOREIGN KEY (`{:class_name=>"SubCategoria", :column=>:subcategoria_id}_id`)
+  REFERENCES `{:class_name=>"SubCategoria", :column=>:subcategoria_id}` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AdicionaColSubcategoriaIdFkToProdutos (20200419000216)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_07e78408aa`
+FOREIGN KEY (`subcategoria_id`)
+  REFERENCES `sub_categorias` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mCategoria Load (0.2ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` ORDER BY `categorias`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AdicionaColSubcategoriaIdFkToProdutos (20200419000216)
+  [1m[35m (32.4ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` int[0m
+  [1m[35m (23.7ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_07e78408aa`
+FOREIGN KEY (`subcategoria_id`)
+  REFERENCES `sub_categorias` (`id`)
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AdicionaColSubcategoriaIdFkToProdutos (20200419000216)
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1899915121749330945', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AdicionaColSubcategoriaIdFkToProdutos (20200419000216)
+  [1m[35m (31.9ms)[0m  [1m[35mALTER TABLE `produtos` ADD `subcategoria_id` bigint[0m
+  [1m[35m (52.3ms)[0m  [1m[35mALTER TABLE `produtos` ADD CONSTRAINT `fk_rails_07e78408aa`
+FOREIGN KEY (`subcategoria_id`)
+  REFERENCES `sub_categorias` (`id`)
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200419000216')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1899915121749330945')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`subcategoria_id` = 1 LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.2ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduto Create (0.2ms)[0m  [1m[32mINSERT INTO `produtos` (`nome`, `marca`, `modelo`, `descricao`, `data_fabricacao`, `valor`, `peso`, `dimensoes`, `created_at`, `updated_at`, `subcategoria_id`) VALUES ('nome teste', 'marca teste', 'modelo teste', 'descricao teste', '2020-04-18', '123,00', 10.0, '1x2', '2020-04-19 00:20:22.944515', '2020-04-19 00:20:22.944515', 1)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` DESC LIMIT 1[0m
+  [1m[36mCategoria Load (0.5ms)[0m  [1m[34mSELECT `categorias`.* FROM `categorias` ORDER BY `categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` LIMIT 11[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.8ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mSubCategoria Load (0.7ms)[0m  [1m[34mSELECT `sub_categorias`.* FROM `sub_categorias` WHERE `sub_categorias`.`categoria_id` = 1 ORDER BY `sub_categorias`.`id` ASC LIMIT 1[0m
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`subcategoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`subcategoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`subcategoria_id` = 1 LIMIT 11[0m
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`subcategoria_id` = 1 LIMIT 11[0m
